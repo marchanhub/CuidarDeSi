@@ -1,0 +1,228 @@
+/* NAVBAR E LOGO */
+.navbar {
+    background-color: var(--white);
+    box-shadow: var(--shadow-md);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    padding: 0 30px;
+    height: auto;
+    min-height: 90px;
+    display: flex;
+    align-items: center;
+}
+
+.navbar .container {
+    position: relative;
+    min-height: 80px;
+    padding: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navbar-toggler {
+    position: relative;
+    left: 0;
+    top: 0;
+    transform: none;
+    z-index: 2;
+    border: none;
+    background: none;
+}
+
+.navbar-brand {
+    position: relative;
+    left: 0;
+    top: 0;
+    transform: none;
+    margin: 0;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    z-index: 1;
+    width: auto;
+}
+
+.logo {
+    height: 70px;
+    min-height: 50px;
+    width: auto;
+    object-fit: contain;
+    display: block;
+    margin: 0;
+    transition: height 0.3s, min-height 0.3s;
+    max-width: 220px;
+}
+
+/* --- DESKTOP --- */
+@media (min-width: 992px) {
+    .navbar .container {
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        position: relative;
+    }
+
+    .navbar-brand {
+        width: 100%;
+        justify-content: center;
+        margin-bottom: 0.5rem;
+        position: static;
+    }
+
+    .logo {
+        height: 290px;
+        min-height: 100px;
+        max-width: 370px;
+    }
+
+    .navbar-toggler {
+        position: static;
+        margin-left: 0;
+    }
+
+    .navbar-collapse {
+        position: relative !important;
+        width: 100%;
+        display: flex !important;
+        justify-content: center;
+        background: none;
+        box-shadow: none;
+        padding: 0;
+        text-align: center;
+    }
+
+    .navbar-nav {
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        padding-left: 0;
+        margin: 0 auto;
+    }
+
+    .main-menu .nav-item {
+        margin: 0 20px;
+    }
+
+    .main-menu .nav-link {
+        font-size: 1.1rem;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        padding: 10px 12px;
+    }
+
+    .main-menu .nav-link i {
+        margin-right: 8px;
+        font-size: 1.1em;
+    }
+
+    .login-menu {
+        position: absolute;
+        top: 0;
+        right: 0;
+        display: flex;
+        align-items: flex-start;
+    }
+
+    .login-menu .nav-link {
+        padding: 10px 24px;
+        font-size: 1.1rem;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+    }
+}
+
+/* --- TABLET E MOBILE --- */
+@media (max-width: 992px) {
+    .navbar {
+        min-height: 220px;
+        padding: 0;
+    }
+
+    .navbar .container {
+        min-height: 200px;
+        justify-content: center;
+    }
+
+    .navbar-toggler {
+        position: absolute;
+        left: 20px;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 3;
+    }
+
+    .navbar-brand {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        width: auto;
+        justify-content: center;
+        z-index: 2;
+    }
+
+    .logo {
+        height: 220px;
+        min-height: 180px;
+        max-width: 90vw;
+    }
+
+    .navbar-collapse {
+        position: absolute !important;
+        top: 100%;
+        left: 0;
+        right: 0;
+        width: 100vw;
+        background: #fff;
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+        z-index: 10;
+        padding: 20px 0 10px 0;
+        border-radius: 0 0 16px 16px;
+        text-align: left;
+    }
+
+    .navbar-nav {
+        flex-direction: column;
+        align-items: flex-start;
+        padding-left: 30px;
+    }
+
+    .navbar-nav .nav-item {
+        margin-bottom: 10px;
+    }
+
+    .navbar-nav .nav-link {
+        font-size: 1.2rem;
+        padding: 10px 0;
+    }
+}
+
+@media (max-width: 576px) {
+    .navbar {
+        min-height: 200px;
+    }
+
+    .logo {
+        height: 200px;
+        min-height: 150px;
+        max-width: 95vw;
+    }
+}
+
+/* --- ESPAÇAMENTO DO BODY PARA NÃO FICAR ATRÁS DA NAVBAR --- */
+body {
+    padding-top: 470px; /* altura do logótipo/navbar em desktop */
+}
+
+@media (max-width: 992px) {
+    body {
+        padding-top: 250px; /* altura do logótipo/navbar em mobile */
+    }
+}

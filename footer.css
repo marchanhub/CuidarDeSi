@@ -1,0 +1,9 @@
+/* FOOTER */
+.footer {
+    background-color: var(--text-color);
+    color: var(--white);
+    padding: var(--spacing-xxl) 0;
+    margin-top: var(--spacing-xxl);
+}
+
+/* Footer Responsive (já incluso no style.css, mas pode ser expandido aqui se necessário) */ 
